@@ -11,8 +11,6 @@ class ItemListSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
       itemCount: catalog.length,
       // สังเกตว่าตอนนี้ ItemListSection ไม่ต้องรู้จัก FavoritesModel เลยด้วยซ้ำ
       itemBuilder: (context, index) => ItemCard(item: catalog[index]),
